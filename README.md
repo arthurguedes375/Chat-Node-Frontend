@@ -6,7 +6,7 @@
 
 ## Getting started
 
-- Clone the [Chat Backend](https://github.com/arthurguedes375/Chat-Node-Backend) and do that chat backend getting started
+- Clone the [Chat Backend](https://github.com/arthurguedes375/Chat-Node-Backend) and do that getting started
 - After clone this repository
 
 - Run this commands in the repository folder
