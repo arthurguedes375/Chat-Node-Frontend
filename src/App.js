@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-import './App.css';
-
-
 import io from 'socket.io-client';
 
+
+import Swal from 'sweetalert2';
+
+import './App.css';
 
 class App extends Component {
 
@@ -48,6 +49,14 @@ class App extends Component {
 
     async startConnection() {
         let socket = io('http://localhost:5000');
+
+        socket.on("internalServerError", (data) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: data.message,
+            })
+        });
 
         socket.on("previousMessages", (data) => {
             this.setState({ messages: data });
